@@ -1,0 +1,494 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #2d3436;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar Udah Kubuat Biar Responsive */
+.top-navbar {
+  background: #ffffff;
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box {
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  color: white;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+}
+
+.brand-text h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.brand-text small {
+  font-size: 11px;
+  color: #8898aa;
+}
+
+.status-tag {
+  background: #e1f5fe;
+  color: #0288d1;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.status-tag .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #0288d1;
+  border-radius: 50%;
+}
+
+/* Nav Center - fitus Pencarian nya */
+.nav-center {
+  flex: 1;
+  max-width: 420px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f1f2f6;
+  padding: 8px 16px;
+  border-radius: 24px;
+  gap: 10px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+  background: #ffffff;
+  border-color: #ff4757;
+  box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.15);
+}
+
+.search-icon {
+  font-size: 14px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 12px;
+  color: #2d3436;
+}
+
+/* Nav Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn {
+  background: #f1f2f6;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.icon-btn:hover {
+  background: #e4e7eb;
+}
+
+.table-badge {
+  background: #f1f2f6;
+  color: #2d3436;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid #dfe4ea;
+}
+
+/* Main Split Screen Layout nya /kubuat Flex */
+.main-layout {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 32px;
+  gap: 32px;
+}
+
+/* Bagian yang Di Kiri */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.promo-banner {
+  background: #fff0f1;
+  color: #ff4757;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid #ffe0e3;
+}
+
+.section-title h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.categories {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cat-btn {
+  background: #ffffff;
+  color: #57606f;
+  border: 1px solid #e4e7eb;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cat-btn.active, .cat-btn:hover {
+  background: #ff4757;
+  color: white;
+  border-color: #ff4757;
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.25);
+}
+
+/* AI Recommendation Box Ku Taroh Sini */
+.rec-section {
+  background: #f1f5f9;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.ai-header {
+  margin-bottom: 16px;
+}
+
+.ai-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #a55eea, #4b7bec);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card .img-box {
+  background: #ffeaa7;
+  height: 120px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.card .img-box.default-bg {
+  background: #f1f2f6;
+}
+
+.img-placeholder {
+  font-size: 42px;
+}
+
+.card .tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.tag.favorit { background: #ff4757; }
+.tag.pedas { background: #ff6b81; }
+
+.card-info {
+  margin-bottom: 12px;
+}
+
+.card .title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.card .price {
+  font-size: 12px;
+  color: #ff4757;
+  font-weight: 600;
+}
+
+.card-add-btn {
+  margin-top: auto;
+  background: #f1f2f6;
+  color: #2d3436;
+  border: none;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-add-btn:hover {
+  background: #ff4757;
+  color: white;
+}
+
+/* Sidebar Keranjang */
+.cart-sidebar {
+  width: 360px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.cart-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-icon {
+  background: #fff0f1;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.cart-title h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.item-count-badge {
+  background: #f1f2f6;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cart-item-img {
+  background: #f1f2f6;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cart-item-price {
+  font-size: 11px;
+  color: #ff4757;
+  font-weight: 600;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f2f6;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.qty-btn {
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.qty-num {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #636e72;
+  margin-bottom: 8px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px dashed #dfe4ea;
+  margin: 12px 0;
+}
+
+.total-row {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 16px;
+}
+
+.total-price {
+  color: #ff4757;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+  transition: transform 0.1s ease;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1024px) {
+  .status-tag {
+    display: none; 
+  }
+}
+
+@media (max-width: 820px) {
+  .nav-center {
+    display: none; 
+  }
+  .main-layout {
+    flex-direction: column;
+  }
+  .cart-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
